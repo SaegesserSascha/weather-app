@@ -9,7 +9,7 @@ function App() {
   );
 }
 
-// fetch("https://weatherbit-v1-mashape.p.rapidapi.com/current?lon=38.5&lat=-78.5", {
+// fetch("https://weatherbit-v1-mashape.p.rapidapi.com/forecast/3hourly?lat=35.5&lon=-78.5", {
 // 	"method": configData.method,
 // 	"headers": {
 // 		"x-rapidapi-key": configData.headers['x-rapidapi-key'],
