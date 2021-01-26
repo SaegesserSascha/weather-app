@@ -5,5 +5,9 @@ ul {
 }
 
 li {
-  padding: .1em;
+  padding: .25em;
+}
+
+span {
+  margin-left: .25em;
 }
