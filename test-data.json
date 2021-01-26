@@ -1,0 +1,47 @@
+{
+  "data": [
+    {
+      "rh": 95.75,
+      "pod": "d",
+      "lon": 38.5,
+      "pres": 615.5,
+      "timezone": "Indian/Kerguelen",
+      "ob_time": "2021-01-26 12:57",
+      "country_code": "TF",
+      "clouds": 0,
+      "ts": 1611665877,
+      "solar_rad": 444.1,
+      "state_code": "03",
+      "city_name": "Port-aux-Français",
+      "wind_spd": 4.31161,
+      "wind_cdir_full": "east-northeast",
+      "wind_cdir": "ENE",
+      "slp": 1008.5,
+      "vis": 24,
+      "h_angle": -72,
+      "sunset": "00:00",
+      "dni": 826.12,
+      "dewpt": -31.8,
+      "snow": 0,
+      "uv": 5.063291,
+      "precip": 0,
+      "wind_dir": 62,
+      "sunrise": "00:00",
+      "ghi": 444.14,
+      "dhi": 83.75,
+      "aqi": null,
+      "lat": -78.5,
+      "weather": {
+        "icon": "c01d",
+        "code": 800,
+        "description": "Clear sky"
+      },
+      "datetime": "2021-01-26:13",
+      "temp": -28.3,
+      "station": "C9300",
+      "elev_angle": 26.3,
+      "app_temp": -40.4
+    }
+  ],
+  "count": 1
+}

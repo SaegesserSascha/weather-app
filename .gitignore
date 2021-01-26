@@ -32,7 +32,7 @@ hs_err_pid*
 
 # production
 /build
-/src/config.js
+/src/config.json
 
 # misc
 .DS_Store
