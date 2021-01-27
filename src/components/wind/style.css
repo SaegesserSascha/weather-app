@@ -1,0 +1,73 @@
+.wind-container {
+  margin: 0;
+  padding: 1em;
+}
+
+.wind-title {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.5rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  align-items: baseline;
+  margin: 0;
+  padding: 0 0.5em;
+}
+
+@media (min-width: 500px) {
+  .wind-title {
+    flex-direction: row;
+  }
+}
+
+ul {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  overflow: scroll hidden;
+  scrollbar-color: auto;
+}
+
+li {
+  margin: 1em 0.75em;
+  text-align: center;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.wind-direction-icon {
+  color: rgba(0, 0, 0, .75);
+}
+
+.wind-speed {
+  color: #304ffe;
+  font-weight: 600;
+  font-size: 2rem;
+  margin: .1em 0;
+}
+
+.wind-speed-unit {
+  color: rgba(0, 0, 0, .75);
+  font-weight: 500;
+  font-size: 1rem;
+  margin: 0;
+}
+
+@media (min-width: 500px) {
+  .wind-speed-unit {
+    margin-left: .5em;
+  }
+}
+
+.time-of-day {
+  font-weight: 400;
+}
+
+span {
+  margin-left: .25em;
+}

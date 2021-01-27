@@ -1,5 +1,5 @@
 import './App.css';
-import WindDirection from './components/wind-direction/WindDirection';
+import Wind from './components/wind/Wind';
 import configData from "./config.json";
 import testData from "./data/test-data.json";
 import DataContext from "./context/DataContext";
@@ -7,9 +7,9 @@ import DataContext from "./context/DataContext";
 
 function App() {
     return (
-      <div>
+      <div className="app">
         <DataContext.Provider value={testData}>
-          <WindDirection />
+          <Wind />
         </DataContext.Provider>
       </div>
     );
