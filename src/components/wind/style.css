@@ -1,37 +1,32 @@
 .wind-container {
+  font-size: .75rem;
   margin: 0;
   padding: 1em;
 }
 
 .wind-title {
   display: flex;
-  flex-direction: column;
   font-size: 1.5rem;
   font-weight: 500;
   letter-spacing: 1px;
   align-items: baseline;
-  margin: 0;
+  margin: 0 0 .25em;
   padding: 0 0.5em;
 }
 
-@media (min-width: 500px) {
-  .wind-title {
-    flex-direction: row;
-  }
-}
-
 ul {
+  align-items: center;
   display: flex;
   flex-direction: row;
   list-style: none;
   padding: 0;
-  margin: 0;
-  overflow: scroll hidden;
+  margin: 2em 1em;
+  overflow: auto hidden;
   scrollbar-color: auto;
 }
 
 li {
-  margin: 1em 0.75em;
+  margin: 0 0.75em;
   text-align: center;
 }
 
@@ -55,13 +50,7 @@ p {
   color: rgba(0, 0, 0, .75);
   font-weight: 500;
   font-size: 1rem;
-  margin: 0;
-}
-
-@media (min-width: 500px) {
-  .wind-speed-unit {
-    margin-left: .5em;
-  }
+  margin-left: .5em;
 }
 
 .time-of-day {
@@ -70,4 +59,17 @@ p {
 
 span {
   margin-left: .25em;
+}
+
+.current-wind {
+  font-size: 1.25rem;
+}
+
+.current-wind-time-label {
+  font-size: 1.25rem;
+  font-weight: 400;
+}
+
+.current-wind .wind-speed {
+  font-size: 2.5rem;
 }

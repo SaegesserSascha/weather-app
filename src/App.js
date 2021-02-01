@@ -1,19 +1,24 @@
 import './App.css';
 import Wind from './components/wind/Wind';
-import configData from "./config.json";
+// import configData from "./config.json";
 import testData from "./data/test-data.json";
 import DataContext from "./context/DataContext";
-
+import ActiveDateContext from './context/ActiveDateContext';
 
 function App() {
-    return (
-      <div className="app">
-        <DataContext.Provider value={testData}>
+  // TODO Replace with user input (day choosen)
+  const testDate = "2021-02-01";
+
+  return (
+    <div className="app">
+      <DataContext.Provider value={testData}>
+        <ActiveDateContext.Provider value={testDate}>
           <Wind />
-        </DataContext.Provider>
-      </div>
-    );
-  }
+        </ActiveDateContext.Provider>
+      </DataContext.Provider>
+    </div>
+  );
+}
 
 // fetch("https://weatherbit-v1-mashape.p.rapidapi.com/forecast/3hourly?lat=35.5&lon=-78.5", {
 // 	"method": configData.method,
