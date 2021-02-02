@@ -1,4 +1,5 @@
 import './App.css';
+import Overview from "./components/overview/Overview";
 import Wind from './components/wind/Wind';
 // import configData from "./config.json";
 import testData from "./data/test-data.json";
@@ -13,6 +14,7 @@ function App() {
     <div className="app">
       <DataContext.Provider value={testData}>
         <ActiveDateContext.Provider value={testDate}>
+          <Overview />
           <Wind />
         </ActiveDateContext.Provider>
       </DataContext.Provider>

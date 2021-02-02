@@ -32,6 +32,7 @@ hs_err_pid*
 
 # production
 /build
+/public/images
 /src/config.json
 
 # misc

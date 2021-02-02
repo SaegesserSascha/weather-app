@@ -31,7 +31,9 @@ function Wind() {
       <p className="wind-speed">
         {getWindSpeedInKilometersPerHour(el.wind_spd)}
       </p>
-      <p className="time-of-day">{getTimeOfDay(el.datetime)}</p>
+      <p className="time-of-day">
+        {getTimeOfDay(el.datetime)}
+      </p>
     </li>
   );
 
