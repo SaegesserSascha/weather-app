@@ -1,6 +1,5 @@
 import './App.css';
 import Overview from "./components/overview/Overview";
-import Wind from './components/wind/Wind';
 // import configData from "./config.json";
 import testData from "./data/test-data.json";
 import DataContext from "./context/DataContext";
@@ -8,14 +7,13 @@ import ActiveDateContext from './context/ActiveDateContext';
 
 function App() {
   // TODO Replace with user input (day choosen)
-  const testDate = "2021-02-01";
+  const testDate = "2021-02-02";
 
   return (
     <div className="app">
       <DataContext.Provider value={testData}>
         <ActiveDateContext.Provider value={testDate}>
           <Overview />
-          <Wind />
         </ActiveDateContext.Provider>
       </DataContext.Provider>
     </div>

@@ -1,22 +1,45 @@
 .overview-container {
-  padding: 0 1em;
+  margin: 1em;
 }
 
 .daily-overview-list {
   display: flex;
   flex-direction: column;
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .daily-overview-list-item {
   background-color: #fff;
   box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  height: calc(100% - 1em);
   margin: .5em;
-  padding: 1em;
+  transition: linear 100ms;
+}
+
+.daily-overview-list-item:hover,
+.daily-overview-list-item:focus {
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
 
 @media (min-width: 500px) {
   .daily-overview-list {
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(calc(250px - 1em), 1fr));
+    grid-auto-rows: 1fr;
   }
+}
+
+.visible {
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
+
+a {
+  text-decoration: none;
+  color: rgba(0, 0, 0, .9);
 }

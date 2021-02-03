@@ -1,3 +1,79 @@
 .daily-overview-container {
-  padding: 1em;
+  align-items: left;
+  display: grid;
+  grid-template-columns: calc(70% - 2em) calc(30% + 2em);
+  grid-auto-rows: 1fr;
+  height: calc(100% - 4em);
+  padding: 2em;
+}
+
+.column-1 {
+  margin-right: 2em;
+}
+
+.column-2 {
+  align-items: center;
+  display: flex;
+  margin-left: auto;
+}
+
+p {
+  font-size: 1rem;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+.date {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.highest-temperature-value,
+.lowest-temperature-value {
+  font-weight: 600;
+}
+
+.highest-temperature {
+  margin-top: 1em;
+}
+
+.lowest-temperature {
+  margin-top: .25em;
+}
+
+img {
+  height: 100px;
+  width: 100px;
+}
+
+@media(min-width: 500px) {
+  .daily-overview-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: calc(70% - 2em) calc(30% + 2em);;
+  }
+
+  .column-1 {
+    margin: 0;
+  }
+
+  .column-2 {
+    margin: auto 0 0 0;
+    justify-content: center;
+  }
+
+  p {
+    font-size: 1.25rem;
+  }
+
+  .date {
+    font-size: 1.5rem;
+    height: 3.5rem;
+    margin-bottom: 1.5em;
+  }
+
+  img {
+    height: 140px;
+    width: 140px;
+  }
 }

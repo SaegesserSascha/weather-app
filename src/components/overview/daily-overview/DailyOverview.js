@@ -73,14 +73,18 @@ export default function DailyOverview({ date, data }) {
 
   return (
     <div className="daily-overview-container">
-      <p>{dayOfWeek}, {day}. {month}</p>
-      <p>
-        Tags {getHighestTemperature()}°C
-      </p>
-      <p>
-        Nachts {getLowestTemperature()}°C
-      </p>
-      <img src={`/images/weather-icons/${getWeatherIconCode()}.png`} alt="Wetter Icon" />
+      <div className="column-1">
+        <p className="date">{dayOfWeek}, {day}. {month}</p>
+        <p className="highest-temperature">
+          Tags <span className="highest-temperature-value">{getHighestTemperature()}°C</span>
+        </p>
+        <p className="lowest-temperature">
+          Nachts <span className="lowest-temperature-value">{getLowestTemperature()}°C</span>
+        </p>
+      </div>
+      <div className="column-2">
+        <img src={`/images/weather-icons/${getWeatherIconCode()}.png`} alt="Wetter Icon" />
+      </div>
     </div>
   );
 }
