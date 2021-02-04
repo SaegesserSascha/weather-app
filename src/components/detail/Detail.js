@@ -1,8 +1,21 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./style.css";
+import { Link } from "react-router-dom";
+import { useLocation } from "react-router-dom";
+import DataContext from "../../context/DataContext";
+import Return from "../return/Return";
 
-export default function Detail({ data }) {
-  const items = data.map(el =>
+export default function Detail() {
+  let location = useLocation();
+  const dataContext = useContext(DataContext);
+  const data = dataContext.data;
+  const date = location.pathname.split("/")[2];
+
+  const todayData = data.filter(el =>
+    el.datetime.split(":")[0] === date
+  );
+
+  const items = todayData.map(el =>
     <li key={el.timestamp_utc}>
       <p className="wind-speed">
         {el.wind_spd}
@@ -15,6 +28,9 @@ export default function Detail({ data }) {
 
   return (
     <div>
+      <Link to="/" >
+        <Return />
+      </Link>
       {items}
     </div>
   );

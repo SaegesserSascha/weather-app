@@ -1,4 +1,5 @@
 import './App.css';
+import { BrowserRouter as Router } from "react-router-dom";
 import Overview from "./components/overview/Overview";
 // import configData from "./config.json";
 import testData from "./data/test-data.json";
@@ -13,7 +14,9 @@ function App() {
     <div className="app">
       <DataContext.Provider value={testData}>
         <ActiveDateContext.Provider value={testDate}>
-          <Overview />
+          <Router>
+            <Overview />
+          </Router>
         </ActiveDateContext.Provider>
       </DataContext.Provider>
     </div>
