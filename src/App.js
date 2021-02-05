@@ -1,5 +1,6 @@
 import './App.css';
 import { BrowserRouter as Router } from "react-router-dom";
+import Header from "./components/header/Header";
 import Overview from "./components/overview/Overview";
 import Footer from "./components/footer/Footer.js";
 // import configData from "./config.json";
@@ -16,6 +17,7 @@ function App() {
       <DataContext.Provider value={testData}>
         <ActiveDateContext.Provider value={testDate}>
           <Router>
+            <Header />
             <Overview />
             <Footer />
           </Router>

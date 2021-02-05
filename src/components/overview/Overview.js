@@ -30,7 +30,7 @@ function Overview() {
       <nav className="overview-container">
         <div className={location.pathname === "/" ? "visible" : "hidden"}>
           <ul className="daily-overview-list">
-            <Link to={`/detail/${dates[0]}`}>
+            <Link to={`/detail/${dates[0]}`} style={{width: "100%", height: "100%"}}>
               <li className="daily-overview-list-item">
                 <DailyOverview date={dates[0]} data={getDataforDate(dates[0])} />
               </li>

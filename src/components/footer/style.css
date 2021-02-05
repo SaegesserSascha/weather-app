@@ -1,16 +1,9 @@
 .footer-container {
-  background-color: #32cd32;
-  color: rgba(255, 255, 255, .9);
   display: grid;
   grid-template-columns: 1;
   grid-template-rows: repeat(2, 1fr);
-  max-width: 100%;
   margin: 0 auto;
   padding: 2em;
-}
-
-.footer-container {
-  max-width: 1250px;
 }
 
 @media(min-width: 500px) {
@@ -29,7 +22,8 @@
 
 .footer-subtitle {
   font-size: 1.1rem;
-  letter-spacing: 3px;
+  font-weight: 600;
+  letter-spacing: 2px;
   margin: 0;
   padding-bottom: 1em;
   text-transform: uppercase;
@@ -44,7 +38,6 @@
 }
 
 .footer-link a {
-  color:rgba(255, 255, 255, .9);
   text-decoration: underline;
 }
 
