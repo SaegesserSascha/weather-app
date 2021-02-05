@@ -27,8 +27,8 @@ function Overview() {
 
   return (
     <>
-      <div className={location.pathname === "/" ? "visible" : "hidden"}>
-        <nav className="overview-container">
+      <nav className="overview-container">
+        <div className={location.pathname === "/" ? "visible" : "hidden"}>
           <ul className="daily-overview-list">
             <Link to={`/detail/${dates[0]}`}>
               <li className="daily-overview-list-item">
@@ -56,8 +56,8 @@ function Overview() {
               </li>
             </Link>
           </ul>
-        </nav>
-      </div>
+        </div>
+      </nav>
       <Switch>
         <Route
           exact path={`/detail/${dates[0]}`}

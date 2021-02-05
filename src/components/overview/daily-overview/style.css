@@ -18,14 +18,14 @@
 }
 
 p {
-  font-size: 1rem;
+  font-size: .75rem;
   margin: 0;
   padding: 0;
   text-decoration: none;
 }
 
 .date {
-  font-size: 1.25rem;
+  font-size: 1rem;
   font-weight: 600;
 }
 
@@ -43,8 +43,23 @@ p {
 }
 
 img {
-  height: 100px;
-  width: 100px;
+  height: 70px;
+  width: 70px;
+}
+
+@media(min-width: 360px) {
+  p {
+    font-size: 1rem;
+  }
+
+  .date {
+    font-size: 1.25rem;
+  }
+  
+  img {
+    height: 100px;
+    width: 100px;
+  }
 }
 
 @media(min-width: 500px) {
