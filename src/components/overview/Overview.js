@@ -30,31 +30,31 @@ function Overview() {
       <nav>
         <div className={location.pathname === "/" ? "visible" : "hidden"}>
           <ul className="daily-overview-list">
-            <Link to={`/detail/${dates[0]}`} style={{ width: "100%", height: "100%" }}>
-              <li className="daily-overview-list-item">
+            <li className="daily-overview-list-item">
+              <Link to={`/detail/${dates[0]}`} style={{ width: "100%", height: "100%" }}>
                 <DailyOverview date={dates[0]} data={getDataforDate(dates[0])} />
-              </li>
-            </Link>
-            <Link to={`/detail/${dates[1]}`}>
-              <li className="daily-overview-list-item">
+              </Link>
+            </li>
+            <li className="daily-overview-list-item">
+              <Link to={`/detail/${dates[1]}`}>
                 <DailyOverview date={dates[1]} data={getDataforDate(dates[1])} />
-              </li>
-            </Link>
-            <Link to={`/detail/${dates[2]}`}>
-              <li className="daily-overview-list-item">
+              </Link>
+            </li>
+            <li className="daily-overview-list-item">
+              <Link to={`/detail/${dates[2]}`}>
                 <DailyOverview date={dates[2]} data={getDataforDate(dates[2])} />
-              </li>
-            </Link>
-            <Link to={`/detail/${dates[3]}`}>
-              <li className="daily-overview-list-item">
+              </Link>
+            </li>
+            <li className="daily-overview-list-item">
+              <Link to={`/detail/${dates[3]}`}>
                 <DailyOverview date={dates[3]} data={getDataforDate(dates[3])} />
-              </li>
-            </Link>
-            <Link to={`/detail/${dates[4]}`}>
-              <li className="daily-overview-list-item">
+              </Link>
+            </li>
+            <li className="daily-overview-list-item">
+              <Link to={`/detail/${dates[4]}`}>
                 <DailyOverview date={dates[4]} data={getDataforDate(dates[4])} />
-              </li>
-            </Link>
+              </Link>
+            </li>
           </ul>
         </div>
       </nav>

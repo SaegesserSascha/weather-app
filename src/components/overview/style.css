@@ -32,6 +32,14 @@
   .daily-overview-list-item {
     margin: 0 .5em;
   }
+
+  .daily-overview-list-item:first-child {
+    margin-left: 0;
+  }
+  
+  .daily-overview-list-item:last-child {
+    margin-right: 0;
+  }
 }
 
 .visible {

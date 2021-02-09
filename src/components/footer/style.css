@@ -3,7 +3,7 @@
   grid-template-columns: 1;
   grid-template-rows: repeat(2, 1fr);
   margin: 0 auto;
-  padding: 2em;
+  padding: 2em 2.5em;
 }
 
 @media(min-width: 500px) {

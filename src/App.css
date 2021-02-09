@@ -1,5 +1,12 @@
 .app {
   margin: 0 auto;
   max-width: 1250px;
-  min-height: 100%;
+  min-height: 100vh;
+  padding: 0 .5em;
+}
+
+@media(min-width: 500px) {
+  .app {
+    padding: 0 1em;
+  }
 }

@@ -1,27 +1,17 @@
 import "./style.css";
-import React, { useContext } from "react";
-import DataContext from "../../context/DataContext";
-import ActiveDateContext from "../../context/ActiveDateContext";
+import React from "react";
 import { FaLocationArrow } from "react-icons/fa";
 
-function Wind() {
+function Wind({ date, data }) {
   // https://react-icons.github.io/react-icons/search
   // Icon "FaLocationArrow" points per default at a 45° angle
   const ICONROTATIONOFFSET = -45;
 
-  const dataContext = useContext(DataContext);
-  const data = dataContext.data;
-
-  const activeDateContext = useContext(ActiveDateContext);
-  const activeDateData = data.filter(el =>
-    el.timestamp_utc.split("T")[0] === activeDateContext
-  );
-
   const currentDate = new Date().toISOString().split("T")[0];
-  const isActiveDateCurrentDate = activeDateContext === currentDate;
+  const isActiveDateCurrentDate = date === currentDate;
 
-  const windItems = activeDateData.map(el =>
-    <li key={el.timestamp_utc}>
+  const windItems = data.map(el =>
+    <li className="wind-list-item" key={el.timestamp_utc}>
       <p className="wind-direction-icon" style={{
         display: "inline-block",
         transform: `rotate(${el.wind_dir + ICONROTATIONOFFSET}deg)`
@@ -37,7 +27,7 @@ function Wind() {
     </li>
   );
 
-  const currentWindItem = activeDateData.slice(0, 1).map(el =>
+  const currentWindItem = data.slice(0, 1).map(el =>
     <li className="current-wind" key={el.timestamp_utc}>
       <p className="wind-direction-icon" style={{
         display: "inline-block",
@@ -69,7 +59,7 @@ function Wind() {
       <h2 className="wind-title">
         Wind <span className="wind-speed-unit">[in km/h]</span>
       </h2>
-      <ul>
+      <ul className="wind-list">
         {isActiveDateCurrentDate
           ? currentWindItem
           : windItems.slice(0, 1)

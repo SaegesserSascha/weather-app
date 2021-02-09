@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 import DataContext from "../../context/DataContext";
 import Return from "../return/Return";
+import Wind from "../wind/Wind";
 
 export default function Detail() {
   let location = useLocation();
@@ -27,11 +28,12 @@ export default function Detail() {
   );
 
   return (
-    <div>
+    <div className="detail-container">
       <Link to="/" >
         <Return />
       </Link>
-      {items}
+      <Wind date={date} data={todayData} />
+      {/* {items} */}
     </div>
   );
 }

@@ -6,22 +6,16 @@ import Footer from "./components/footer/Footer.js";
 // import configData from "./config.json";
 import testData from "./data/test-data.json";
 import DataContext from "./context/DataContext";
-import ActiveDateContext from './context/ActiveDateContext';
 
 function App() {
-  // TODO Replace with user input (day choosen)
-  const testDate = "2021-02-02";
-
   return (
     <div className="app">
       <DataContext.Provider value={testData}>
-        <ActiveDateContext.Provider value={testDate}>
           <Router>
             <Header />
             <Overview />
             <Footer />
           </Router>
-        </ActiveDateContext.Provider>
       </DataContext.Provider >
     </div >
   );
