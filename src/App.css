@@ -129,3 +129,15 @@ ul {
 .pointer {
   cursor: pointer;
 }
+
+.sticky {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+@media(min-width: 500px) {
+  .sticky {
+    position: initial;
+  }
+}

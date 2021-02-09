@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import "./style.css";
 import {
   Switch,
@@ -13,6 +13,10 @@ import Detail from "../detail/Detail";
 
 function Overview() {
   let location = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
 
   const dataContext = useContext(DataContext);
   const data = dataContext.data;

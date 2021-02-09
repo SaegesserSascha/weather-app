@@ -11,11 +11,11 @@ function App() {
   return (
     <div className="app">
       <DataContext.Provider value={testData}>
-          <Router>
-            <Header />
-            <Overview />
-            <Footer />
-          </Router>
+        <Router>
+          <Header />
+          <Overview />
+          <Footer />
+        </Router>
       </DataContext.Provider >
     </div >
   );
