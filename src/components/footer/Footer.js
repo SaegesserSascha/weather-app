@@ -25,10 +25,10 @@ export default function Footer() {
           <p>CSS 3</p>
         </li>
         <li className="footer-list-item">
-          <p>Javascript (ES6+)</p>
+          <p>JavaScript ES6+</p>
         </li>
         <li className="footer-list-item">
-          <p className="footer-link">Powered by <a href="https://reactjs.org/">React v17</a></p>
+          <p className="footer-link">React 17</p>
         </li>
       </ul>
     </footer>

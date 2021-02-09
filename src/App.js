@@ -22,8 +22,8 @@ function App() {
             <Footer />
           </Router>
         </ActiveDateContext.Provider>
-      </DataContext.Provider>
-    </div>
+      </DataContext.Provider >
+    </div >
   );
 }
 

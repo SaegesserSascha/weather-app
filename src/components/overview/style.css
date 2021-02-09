@@ -1,6 +1,5 @@
 .overview-container {
   margin: 0 auto;
-  max-width: 1250px; 
 }
 
 .daily-overview-list {
@@ -14,7 +13,7 @@
   border-radius: 4px;
   box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
   height: calc(100% - 1em);
-  margin: 0 .5em;
+  margin: .5em;
   transition: linear 100ms;
 }
 
@@ -28,6 +27,10 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(calc(250px - 1em), 1fr));
     grid-auto-rows: 1fr;
+  }
+
+  .daily-overview-list-item {
+    margin: 0 .5em;
   }
 }
 
