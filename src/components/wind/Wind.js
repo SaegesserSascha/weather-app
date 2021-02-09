@@ -45,8 +45,8 @@ function Wind({ date, data }) {
   );
 
   function getWindSpeedInKilometersPerHour(metersPerSecond) {
-    const conversationFactor = 3.6;
-    const kilometersPerHour = metersPerSecond * conversationFactor;
+    const CONVERSATIONFACTOR = 3.6;
+    const kilometersPerHour = metersPerSecond * CONVERSATIONFACTOR;
     return Math.round(kilometersPerHour);
   }
 
