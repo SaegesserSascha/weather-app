@@ -5,14 +5,17 @@
 
 @media(min-width: 500px) {
   .header-container {
-    padding: 4em 10%;
+    padding: 4em 2.5em;
   }
 }
 
 .header-title {
-  font-size: 2.25rem;
+  color: rgba(255, 255, 255, .95);
+  font-size: 3rem;
   font-weight: 600;
   letter-spacing: 2px;
   padding: 0;
   margin: 0;
+  text-transform: uppercase;
+  text-shadow: 1px 2px 3px rgba(0, 0, 0, .5);
 }

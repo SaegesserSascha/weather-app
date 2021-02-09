@@ -7,7 +7,7 @@ export default function Footer() {
       <ul className="contact">
         <h3 className="footer-subtitle">Kontakt</h3>
         <li className="footer-list-item">
-          <p>Sascha Sägesser</p>
+          <p>[REDACTED]</p>
         </li>
         <li className="footer-list-item">
           <p className="footer-link"><a href="https://www.linkedin.com/in/sascha-saegesser/">LinkedIn</a></p>
