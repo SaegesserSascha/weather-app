@@ -4,7 +4,7 @@ import "./style.css";
 export default function Footer() {
   return (
     <footer className="footer-container">
-      <ul className="footer-list contact">
+      <ul className="contact">
         <h3 className="footer-subtitle">Kontakt</h3>
         <li className="footer-list-item">
           <p>Sascha Sägesser</p>
@@ -16,7 +16,7 @@ export default function Footer() {
           <p className="footer-link"><a href="https://github.com/SaegesserSascha">GitHub</a></p>
         </li>
       </ul>
-      <ul className="footer-list used-technologies">
+      <ul className="used-technologies">
         <h3 className="footer-subtitle">Technologien</h3>
         <li className="footer-list-item">
           <p>HTML 5</p>

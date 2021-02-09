@@ -2,12 +2,6 @@
   margin: 0 auto;
 }
 
-.daily-overview-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
 .daily-overview-list-item {
   background-color: #fff;
   border-radius: 4px;
@@ -32,25 +26,4 @@
   .daily-overview-list-item {
     margin: 0 .5em;
   }
-
-  .daily-overview-list-item:first-child {
-    margin-left: 0;
-  }
-  
-  .daily-overview-list-item:last-child {
-    margin-right: 0;
-  }
-}
-
-.visible {
-  display: block;
-}
-
-.hidden {
-  display: none;
-}
-
-a {
-  text-decoration: none;
-  color: rgba(0, 0, 0, .9);
 }

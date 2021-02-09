@@ -4,7 +4,7 @@ import { GrReturn } from "react-icons/gr";
 
 export default function Return() {
   return (
-    <button className="cta-return-button">
+    <button className="cta-return-button pointer">
       <div className="return-text-container">
         <span className="return-icon"><GrReturn /></span>
         <p className="return-text">Übersicht</p>

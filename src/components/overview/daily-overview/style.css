@@ -7,26 +7,24 @@
   padding: 2em;
 }
 
-.column-1 {
+.daily-overview-column-1 {
   margin-right: 2em;
 }
 
-.column-2 {
+.daily-overview-column-2 {
   align-items: center;
   display: flex;
   margin-left: auto;
 }
 
-p {
-  font-size: .75rem;
-  margin: 0;
-  padding: 0;
-  text-decoration: none;
+.daily-overview-fixed-height {
+  height: 2.5em;
 }
 
-.date {
-  font-size: 1rem;
-  font-weight: 600;
+@media(min-width: 500px) {
+  .daily-overview-fixed-height {
+    height: 4rem;
+  }
 }
 
 .highest-temperature-value,
@@ -42,21 +40,13 @@ p {
   margin-top: .25em;
 }
 
-img {
+.daily-overview-column-2 > img {
   height: 70px;
   width: 70px;
 }
 
 @media(min-width: 360px) {
-  p {
-    font-size: 1rem;
-  }
-
-  .date {
-    font-size: 1.25rem;
-  }
-  
-  img {
+  .daily-overview-column-2 > img {
     height: 100px;
     width: 100px;
   }
@@ -68,26 +58,16 @@ img {
     grid-template-rows: calc(70% - 2em) calc(30% + 2em);;
   }
 
-  .column-1 {
+  .daily-overview-column-1 {
     margin: 0;
   }
 
-  .column-2 {
+  .daily-overview-column-2 {
     margin: auto 0 0 0;
     justify-content: center;
   }
 
-  p {
-    font-size: 1.25rem;
-  }
-
-  .date {
-    font-size: 1.5rem;
-    height: 3.5rem;
-    margin-bottom: 1.5em;
-  }
-
-  img {
+  .daily-overview-column-2 > img {
     height: 140px;
     width: 140px;
   }

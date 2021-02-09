@@ -55,8 +55,8 @@ function Wind({ date, data }) {
   }
 
   return (
-    <div className="wind-container">
-      <h2 className="wind-title">
+    <div className="container">
+      <h2 className="subtitle">
         Wind <span className="wind-speed-unit">[in km/h]</span>
       </h2>
       <ul className="wind-list">

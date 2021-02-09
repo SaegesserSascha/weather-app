@@ -18,12 +18,7 @@ export default function Detail() {
 
   const items = todayData.map(el =>
     <li key={el.timestamp_utc}>
-      <p className="wind-speed">
-        {el.wind_spd}
-      </p>
-      <p className="time-of-day">
-        {el.datetime}
-      </p>
+      {el.wind_spd}
     </li>
   );
 
@@ -33,7 +28,9 @@ export default function Detail() {
         <Return />
       </Link>
       <Wind date={date} data={todayData} />
-      {/* {items} */}
+      <ul>
+        {items}
+      </ul>
     </div>
   );
 }
