@@ -18,7 +18,7 @@ function Wind({ date, data }) {
       }}>
         <FaLocationArrow />
       </p>
-      <p className="wind-speed">
+      <p className="wind-speed accent-color">
         {getWindSpeedInKilometersPerHour(el.wind_spd)}
       </p>
       <p className="time-of-day">
@@ -35,7 +35,7 @@ function Wind({ date, data }) {
       }}>
         <FaLocationArrow />
       </p>
-      <p className="wind-speed">
+      <p className="wind-speed accent-color">
         {getWindSpeedInKilometersPerHour(el.wind_spd)}
       </p>
       <p className="current-wind-time-label">

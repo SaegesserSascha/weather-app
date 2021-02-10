@@ -8,8 +8,20 @@
   max-width: 1250px;
 }
 
+.detail-subtitle {
+  padding: 1em;
+}
+
 .detail-list {
   padding: 0 1em;
+}
+
+.detail-list-item {
+  padding: 1.5em 0;
+}
+
+.detail-list-item:not(:last-child) {
+  border-bottom: 1px solid rgba(0, 0, 0, .35);
 }
 
 @media(min-width: 500px) {

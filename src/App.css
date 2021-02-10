@@ -122,3 +122,7 @@ ul {
 .pointer {
   cursor: pointer;
 }
+
+.accent-color {
+  color: #3067fe;
+}

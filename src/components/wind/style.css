@@ -2,7 +2,7 @@
   align-items: flex-end;
   display: flex;
   flex-direction: row;
-  margin: 2em 0;
+  margin: 2em 0 0;
   overflow: auto hidden;
   scrollbar-color: auto;
 }
@@ -14,7 +14,6 @@
 }
 
 .wind-speed {
-  color: #304ffe;
   font-weight: 600;
   font-size: 2rem;
   margin: .1em 0;

@@ -2,8 +2,10 @@ import React, { useContext } from "react";
 import "./style.css";
 import { useLocation } from "react-router-dom";
 import DataContext from "../../context/DataContext";
+import { formatDate } from "../../util/DateFormatter";
 import Return from "../return/Return";
 import Wind from "../wind/Wind";
+import Temperature from "../temperature/Temperature";
 
 export default function Detail() {
   let location = useLocation();
@@ -15,32 +17,18 @@ export default function Detail() {
     el.datetime.split(":")[0] === date
   );
 
-  const items = todayData.map(el =>
-    <li key={el.timestamp_utc}>
-      {el.wind_spd}
-    </li>
-  );
-
   return (
     <div className="detail-container">
       <div className="detail-content-container">
+        <h2 className="detail-subtitle">{formatDate({ date })}</h2>
         <Return />
         <ul className="detail-list">
           <li className="detail-list-item">
-            <Wind date={date} data={todayData} />
+            <Temperature date={date} data={todayData} />
           </li>
           <li className="detail-list-item">
             <Wind date={date} data={todayData} />
           </li>
-          <li className="detail-list-item">
-            <Wind date={date} data={todayData} />
-          </li>
-          <li className="detail-list-item">
-            <Wind date={date} data={todayData} />
-          </li>
-        </ul>
-        <ul>
-          {items}
         </ul>
       </div>
     </div>
