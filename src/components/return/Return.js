@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./style.css";
+import { Link } from "react-router-dom";
 import { GrReturn } from "react-icons/gr";
 
 export default function Return() {
@@ -21,11 +22,13 @@ export default function Return() {
   }, []);
 
   return (
-    <button className={`cta-return-button pointer${isSticky ? " sticky" : ""}`} ref={ref}>
-      <div className="return-text-container">
-        <span className="return-icon"><GrReturn /></span>
-        <p className="return-text">Übersicht</p>
-      </div>
-    </button>
+    <Link to="/" >
+      <button className={`cta-return-button pointer${isSticky ? " sticky" : ""}`} ref={ref}>
+        <div className="return-text-container">
+          <span className="return-icon"><GrReturn /></span>
+          <p className="return-text">Übersicht</p>
+        </div>
+      </button>
+    </Link>
   );
 }

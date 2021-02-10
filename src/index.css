@@ -2,8 +2,6 @@
 
 html,
 body {
-  background: rgb(124,244,244);
-  background: linear-gradient(180deg, rgba(124,244,244,1) 0%, rgba(194,231,231,1) 50%);
   color: rgba(0, 0, 0, .9);
   min-height: 100%;
 }

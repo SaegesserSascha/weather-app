@@ -84,10 +84,7 @@ ul {
 }
 
 .app {
-  margin: 0 auto;
-  max-width: 1250px;
   min-height: 100vh;
-  padding: 0 .5em;
 }
 
 @media(min-width: 500px) {
@@ -97,10 +94,6 @@ ul {
 
   p {
     font-size: 1.25rem;
-  }
-
-  .app {
-    padding: 0 1em;
   }
 }
 
@@ -128,16 +121,4 @@ ul {
 
 .pointer {
   cursor: pointer;
-}
-
-.sticky {
-  position: sticky;
-  top: 0;
-  z-index: 100;
-}
-
-@media(min-width: 500px) {
-  .sticky {
-    position: initial;
-  }
 }

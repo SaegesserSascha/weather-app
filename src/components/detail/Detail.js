@@ -1,6 +1,5 @@
 import React, { useContext } from "react";
 import "./style.css";
-import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 import DataContext from "../../context/DataContext";
 import Return from "../return/Return";
@@ -24,13 +23,26 @@ export default function Detail() {
 
   return (
     <div className="detail-container">
-      <Link to="/" >
+      <div className="detail-content-container">
         <Return />
-      </Link>
-      <Wind date={date} data={todayData} />
-      <ul>
-        {items}
-      </ul>
+        <ul className="detail-list">
+          <li className="detail-list-item">
+            <Wind date={date} data={todayData} />
+          </li>
+          <li className="detail-list-item">
+            <Wind date={date} data={todayData} />
+          </li>
+          <li className="detail-list-item">
+            <Wind date={date} data={todayData} />
+          </li>
+          <li className="detail-list-item">
+            <Wind date={date} data={todayData} />
+          </li>
+        </ul>
+        <ul>
+          {items}
+        </ul>
+      </div>
     </div>
   );
 }

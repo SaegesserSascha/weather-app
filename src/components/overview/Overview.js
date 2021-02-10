@@ -32,34 +32,36 @@ function Overview() {
   return (
     <>
       <nav>
-        <div className={location.pathname === "/" ? "visible" : "hidden"}>
-          <ul className="daily-overview-list">
-            <li className="daily-overview-list-item pointer">
-              <Link to={`/detail/${dates[0]}`} style={{ width: "100%", height: "100%" }}>
-                <DailyOverview date={dates[0]} data={getDataforDate(dates[0])} />
-              </Link>
-            </li>
-            <li className="daily-overview-list-item pointer">
-              <Link to={`/detail/${dates[1]}`}>
-                <DailyOverview date={dates[1]} data={getDataforDate(dates[1])} />
-              </Link>
-            </li>
-            <li className="daily-overview-list-item pointer">
-              <Link to={`/detail/${dates[2]}`}>
-                <DailyOverview date={dates[2]} data={getDataforDate(dates[2])} />
-              </Link>
-            </li>
-            <li className="daily-overview-list-item pointer">
-              <Link to={`/detail/${dates[3]}`}>
-                <DailyOverview date={dates[3]} data={getDataforDate(dates[3])} />
-              </Link>
-            </li>
-            <li className="daily-overview-list-item pointer">
-              <Link to={`/detail/${dates[4]}`}>
-                <DailyOverview date={dates[4]} data={getDataforDate(dates[4])} />
-              </Link>
-            </li>
-          </ul>
+        <div className={`overview-container${location.pathname === "/" ? " visible" : " hidden"}`}>
+          <div className="overview-content-container">
+            <ul className="daily-overview-list">
+              <li className="daily-overview-list-item pointer">
+                <Link to={`/detail/${dates[0]}`} style={{ width: "100%", height: "100%" }}>
+                  <DailyOverview date={dates[0]} data={getDataforDate(dates[0])} />
+                </Link>
+              </li>
+              <li className="daily-overview-list-item pointer">
+                <Link to={`/detail/${dates[1]}`}>
+                  <DailyOverview date={dates[1]} data={getDataforDate(dates[1])} />
+                </Link>
+              </li>
+              <li className="daily-overview-list-item pointer">
+                <Link to={`/detail/${dates[2]}`}>
+                  <DailyOverview date={dates[2]} data={getDataforDate(dates[2])} />
+                </Link>
+              </li>
+              <li className="daily-overview-list-item pointer">
+                <Link to={`/detail/${dates[3]}`}>
+                  <DailyOverview date={dates[3]} data={getDataforDate(dates[3])} />
+                </Link>
+              </li>
+              <li className="daily-overview-list-item pointer">
+                <Link to={`/detail/${dates[4]}`}>
+                  <DailyOverview date={dates[4]} data={getDataforDate(dates[4])} />
+                </Link>
+              </li>
+            </ul>
+          </div>
         </div>
       </nav>
       <Switch>

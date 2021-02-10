@@ -1,3 +1,19 @@
 .detail-container {
-  padding: 0 .5em;
+  background: rgb(124,244,244);
+  background: linear-gradient(180deg, rgba(124,244,244,1) 0%, rgba(194,231,231,1) 50%);
+}
+
+.detail-content-container {
+  margin: 0 auto;
+  max-width: 1250px;
+}
+
+.detail-list {
+  padding: 0 1em;
+}
+
+@media(min-width: 500px) {
+  .detail-list {
+    padding: 0 2em;
+  };
 }
