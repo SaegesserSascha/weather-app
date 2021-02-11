@@ -1,0 +1,62 @@
+.temperature-list {
+  align-items: flex-end;
+  display: flex;
+  flex-direction: row;
+  margin: 2em 0 0;
+  overflow: auto hidden;
+  scrollbar-color: auto;
+}
+
+.temperature-list-item,
+.current-temperature-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 50px;
+}
+
+@media(min-width: 500px) {
+  .temperature-list-item,
+  .current-temperature-item {
+    min-width: 64px;
+  }
+}
+
+.current-temperature-item {
+  margin: 0 1.25em;
+}
+
+.current-temperature-item p {
+  font-size: 1.5rem;
+}
+
+.current-temperature-time-label {
+  font-size: 1.25rem;
+  font-weight: 400;
+}
+
+.temperature-list-item {
+  margin: 0 .5em;
+}
+
+.temperature-weather-icon {
+  height: 40px;
+  width: 40px;
+}
+
+@media(min-width: 500px) {
+  .temperature-weather-icon {
+    height: 64px;
+    width: 64px;
+  }
+}
+
+.temperature-value {
+  align-content: flex-end;
+  display: flex;
+}
+
+.temperature-type {
+  font-size: 1rem;
+  margin-left: 2px;
+}

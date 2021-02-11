@@ -1,3 +1,9 @@
+.wind-speed-unit {
+  font-weight: 500;
+  font-size: 1rem;
+  margin-left: .5em;
+}
+
 .wind-list {
   align-items: flex-end;
   display: flex;
@@ -8,36 +14,49 @@
 }
 
 .wind-list-item,
-.current-wind {
+.current-wind-item {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  min-width: 50px;
+}
+
+@media(min-width: 500px) {
+  .wind-list-item,
+  .current-wind-item {
+    min-width: 64px;
+  }
+}
+
+.wind-list-item {
+  margin: 0 .5em;
+}
+
+.current-wind-item {
   margin: 0 1.25em;
-  text-align: center;
 }
 
-.wind-speed {
-  font-weight: 600;
-  font-size: 2rem;
-  margin: .1em 0;
+.wind-value {
+  font-size: 1.5rem;
+  padding: .5em 0;
 }
 
-.wind-speed-unit {
+.wind-value,
+.current-wind-value {
+  align-content: flex-end;
+  display: flex;
   font-weight: 500;
-  font-size: 1rem;
-  margin-left: .5em;
 }
 
-.time-of-day {
-  font-weight: 400;
+.current-wind-icon {
+  font-size: 1.5rem;
 }
 
-.current-wind {
-  font-size: 1.25rem;
+.current-wind-value {
+  font-size: 2rem;
+  padding: .25em 0;
 }
 
-.current-wind-time-label {
-  font-size: 1.25rem;
-  font-weight: 400;
-}
-
-.current-wind .wind-speed {
-  font-size: 2.5rem;
+.current-wind-timestamp {
+  font-size: 1.5rem;
 }

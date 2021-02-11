@@ -1,14 +1,12 @@
 import "./style.css";
 import React from "react";
 import { FaLocationArrow } from "react-icons/fa";
+import { isCurrentDate } from "../../util/IsCurrentDateChecker";
 
 function Wind({ date, data }) {
   // https://react-icons.github.io/react-icons/search
   // Icon "FaLocationArrow" points per default at a 45° angle
   const ICONROTATIONOFFSET = -45;
-
-  const currentDate = new Date().toISOString().split("T")[0];
-  const isActiveDateCurrentDate = date === currentDate;
 
   const windItems = data.map(el =>
     <li className="wind-list-item" key={el.timestamp_utc}>
@@ -18,27 +16,27 @@ function Wind({ date, data }) {
       }}>
         <FaLocationArrow />
       </p>
-      <p className="wind-speed primary-color">
+      <p className="wind-value primary-color">
         {getWindSpeedInKilometersPerHour(el.wind_spd)}
       </p>
-      <p className="time-of-day">
+      <p>
         {getTimeOfDay(el.datetime)}
       </p>
     </li>
   );
 
   const currentWindItem = data.slice(0, 1).map(el =>
-    <li className="current-wind" key={el.timestamp_utc}>
-      <p className="wind-direction-icon" style={{
+    <li className="current-wind-item" key={el.timestamp_utc}>
+      <p className="current-wind-icon" style={{
         display: "inline-block",
         transform: `rotate(${el.wind_dir + ICONROTATIONOFFSET}deg)`
       }}>
         <FaLocationArrow />
       </p>
-      <p className="wind-speed primary-color">
+      <p className="current-wind-value primary-color">
         {getWindSpeedInKilometersPerHour(el.wind_spd)}
       </p>
-      <p className="current-wind-time-label">
+      <p className="current-wind-timestamp">
         Jetzt
       </p>
     </li>
@@ -57,10 +55,10 @@ function Wind({ date, data }) {
   return (
     <div className="container">
       <h2 className="subtitle">
-        Wind <span className="wind-speed-unit">[in km/h]</span>
+        Wind<span className="wind-speed-unit">[in km/h]</span>
       </h2>
       <ul className="wind-list">
-        {isActiveDateCurrentDate
+        {isCurrentDate(date)
           ? currentWindItem
           : windItems.slice(0, 1)
         }
