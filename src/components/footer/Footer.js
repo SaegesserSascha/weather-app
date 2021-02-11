@@ -33,7 +33,7 @@ export default function Footer() {
           </li>
         </ul>
         <ul className="footer-list">
-          <h3 className="footer-subtitle">Images</h3>
+          <h3 className="footer-subtitle">Icons</h3>
           <li className="footer-list-item">
             <p className="footer-link">Header icon made by <a href="https://www.freepik.com" title="Freepik">Freepik</a><br />
             from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>

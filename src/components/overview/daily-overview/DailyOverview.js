@@ -1,6 +1,7 @@
 import React from "react";
 import "./style.css";
 import { formatDate } from "../../../util/DateFormatter";
+import { HiOutlineArrowNarrowDown, HiOutlineArrowNarrowUp } from "react-icons/hi";
 
 export default function DailyOverview({ date, data }) {
   function getHighestTemperature() {
@@ -38,13 +39,17 @@ export default function DailyOverview({ date, data }) {
   return (
     <div className="daily-overview-container">
       <div className="daily-overview-column-1">
-        <h2 className="daily-overview-fixed-height">{formatDate({date})}</h2>
-        <p className="highest-temperature">
-          Tags <span className="highest-temperature-value">{getHighestTemperature()}°C</span>
-        </p>
-        <p className="lowest-temperature">
-          Nachts <span className="lowest-temperature-value">{getLowestTemperature()}°C</span>
-        </p>
+        <h2 className="daily-overview-fixed-height">{formatDate({ date })}</h2>
+        <div className="daily-overview-temperatures">
+          <p className="highest-temperature">
+            <HiOutlineArrowNarrowUp />
+            <span className="highest-temperature-value">{getHighestTemperature()}</span> °C
+          </p>
+          <p className="lowest-temperature">
+            <HiOutlineArrowNarrowDown />
+            <span className="lowest-temperature-value">{getLowestTemperature()}°C</span>
+          </p>
+        </div>
       </div>
       <div className="daily-overview-column-2">
         <img src={`/images/weather-icons/${getWeatherIconCode()}.png`} alt="Wetter Icon" />

@@ -30,14 +30,30 @@
 .highest-temperature-value,
 .lowest-temperature-value {
   font-weight: 600;
+  margin-left: .1em;
 }
 
-.highest-temperature {
+.daily-overview-temperatures {
+  display: flex;
   margin-top: 1em;
 }
 
+@media(min-width: 500px) {
+  .daily-overview-temperatures {
+    align-items: center;
+    justify-content: center;
+    margin-top: 2em;
+  }
+}
+
+.highest-temperature,
 .lowest-temperature {
-  margin-top: .25em;
+  align-items: center;
+  display: flex;
+}
+
+.highest-temperature {
+  margin-right: 1em;
 }
 
 .daily-overview-column-2 > img {
